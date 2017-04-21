@@ -1,0 +1,945 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >requisition (v1.7.0)</a>
+</h1>
+<h4>ES7 async/await ready http client</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.requisition">module requisition</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.requisition">
+            function <span class="apidocSignatureSpan"></span>requisition
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.acl">
+            function <span class="apidocSignatureSpan">requisition.</span>acl
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.checkout">
+            function <span class="apidocSignatureSpan">requisition.</span>checkout
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.connect">
+            function <span class="apidocSignatureSpan">requisition.</span>connect
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.copy">
+            function <span class="apidocSignatureSpan">requisition.</span>copy
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.defaults">
+            function <span class="apidocSignatureSpan">requisition.</span>defaults
+            <span class="apidocSignatureSpan">(defaults)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.delete">
+            function <span class="apidocSignatureSpan">requisition.</span>delete
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.get">
+            function <span class="apidocSignatureSpan">requisition.</span>get
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.head">
+            function <span class="apidocSignatureSpan">requisition.</span>head
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.link">
+            function <span class="apidocSignatureSpan">requisition.</span>link
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.lock">
+            function <span class="apidocSignatureSpan">requisition.</span>lock
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.m-search">
+            function <span class="apidocSignatureSpan">requisition.</span>m-search
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.merge">
+            function <span class="apidocSignatureSpan">requisition.</span>merge
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.mkactivity">
+            function <span class="apidocSignatureSpan">requisition.</span>mkactivity
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.mkcalendar">
+            function <span class="apidocSignatureSpan">requisition.</span>mkcalendar
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.mkcol">
+            function <span class="apidocSignatureSpan">requisition.</span>mkcol
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.move">
+            function <span class="apidocSignatureSpan">requisition.</span>move
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.notify">
+            function <span class="apidocSignatureSpan">requisition.</span>notify
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.options">
+            function <span class="apidocSignatureSpan">requisition.</span>options
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.patch">
+            function <span class="apidocSignatureSpan">requisition.</span>patch
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.post">
+            function <span class="apidocSignatureSpan">requisition.</span>post
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.propfind">
+            function <span class="apidocSignatureSpan">requisition.</span>propfind
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.proppatch">
+            function <span class="apidocSignatureSpan">requisition.</span>proppatch
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.purge">
+            function <span class="apidocSignatureSpan">requisition.</span>purge
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.put">
+            function <span class="apidocSignatureSpan">requisition.</span>put
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.rebind">
+            function <span class="apidocSignatureSpan">requisition.</span>rebind
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.report">
+            function <span class="apidocSignatureSpan">requisition.</span>report
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.search">
+            function <span class="apidocSignatureSpan">requisition.</span>search
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.subscribe">
+            function <span class="apidocSignatureSpan">requisition.</span>subscribe
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.trace">
+            function <span class="apidocSignatureSpan">requisition.</span>trace
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.unbind">
+            function <span class="apidocSignatureSpan">requisition.</span>unbind
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.unlink">
+            function <span class="apidocSignatureSpan">requisition.</span>unlink
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.unlock">
+            function <span class="apidocSignatureSpan">requisition.</span>unlock
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.requisition.unsubscribe">
+            function <span class="apidocSignatureSpan">requisition.</span>unsubscribe
+            <span class="apidocSignatureSpan">(url, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.requisition" id="apidoc.module.requisition">module requisition</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.requisition" id="apidoc.element.requisition.requisition">
+        function <span class="apidocSignatureSpan"></span>requisition
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(&#x27;GET&#x27;, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.acl" id="apidoc.element.requisition.acl">
+        function <span class="apidocSignatureSpan">requisition.</span>acl
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.checkout" id="apidoc.element.requisition.checkout">
+        function <span class="apidocSignatureSpan">requisition.</span>checkout
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.connect" id="apidoc.element.requisition.connect">
+        function <span class="apidocSignatureSpan">requisition.</span>connect
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.copy" id="apidoc.element.requisition.copy">
+        function <span class="apidocSignatureSpan">requisition.</span>copy
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.defaults" id="apidoc.element.requisition.defaults">
+        function <span class="apidocSignatureSpan">requisition.</span>defaults
+        <span class="apidocSignatureSpan">(defaults)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaults = function (defaults) {
+  assert(typeof defaults === &#x27;object&#x27;);
+  var keys = Object.keys(defaults);
+
+  function request(url, opts) {
+    opts = opts || {};
+    keys.forEach(function (key) {
+      if (opts[key] == null) opts[key] = defaults[key];
+    });
+    return new Request(&#x27;GET&#x27;, url, opts);
+  }
+
+  methods.forEach(function (method) {
+    var METHOD = method.toUpperCase();
+    request[method] = function request(url, opts) {
+      opts = opts || {};
+      keys.forEach(function (key) {
+        if (opts[key] == null) opts[key] = defaults[key];
+      });
+      return new Request(METHOD, url, opts);
+    }
+  })
+
+  return request;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.delete" id="apidoc.element.requisition.delete">
+        function <span class="apidocSignatureSpan">requisition.</span>delete
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.get" id="apidoc.element.requisition.get">
+        function <span class="apidocSignatureSpan">requisition.</span>get
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+#### response.is(types...)
+
+Infer the `Content-Type` of the response,
+similar to Koa or Express&#x27; method.
+See [type-is](https://github.com/jshttp/type-is).
+
+#### response.<span class="apidocCodeKeywordSpan">get</span>(header)
+
+Get the value for a header.
+
+#### response.charset
+
+Get charset.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.head" id="apidoc.element.requisition.head">
+        function <span class="apidocSignatureSpan">requisition.</span>head
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.link" id="apidoc.element.requisition.link">
+        function <span class="apidocSignatureSpan">requisition.</span>link
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.lock" id="apidoc.element.requisition.lock">
+        function <span class="apidocSignatureSpan">requisition.</span>lock
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.m-search" id="apidoc.element.requisition.m-search">
+        function <span class="apidocSignatureSpan">requisition.</span>m-search
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.merge" id="apidoc.element.requisition.merge">
+        function <span class="apidocSignatureSpan">requisition.</span>merge
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.mkactivity" id="apidoc.element.requisition.mkactivity">
+        function <span class="apidocSignatureSpan">requisition.</span>mkactivity
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.mkcalendar" id="apidoc.element.requisition.mkcalendar">
+        function <span class="apidocSignatureSpan">requisition.</span>mkcalendar
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.mkcol" id="apidoc.element.requisition.mkcol">
+        function <span class="apidocSignatureSpan">requisition.</span>mkcol
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.move" id="apidoc.element.requisition.move">
+        function <span class="apidocSignatureSpan">requisition.</span>move
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.notify" id="apidoc.element.requisition.notify">
+        function <span class="apidocSignatureSpan">requisition.</span>notify
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.options" id="apidoc.element.requisition.options">
+        function <span class="apidocSignatureSpan">requisition.</span>options
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.patch" id="apidoc.element.requisition.patch">
+        function <span class="apidocSignatureSpan">requisition.</span>patch
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.post" id="apidoc.element.requisition.post">
+        function <span class="apidocSignatureSpan">requisition.</span>post
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+async function () {
+  var res = await req(&#x27;/users.json&#x27;);
+  var body = await res.json();
+}
+
+// POST an image file
+async function () {
+  var res = await req.<span class="apidocCodeKeywordSpan">post</span>(&#x27;/images.json&#x27;).sendFile(&#x27;image.png&#x27;);
+  var body = await res.json();
+}
+```
+
+## Differences
+
+This is similar to other AJAX libraries like [axios](https://github.com/mzabriskie/axios) except:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.propfind" id="apidoc.element.requisition.propfind">
+        function <span class="apidocSignatureSpan">requisition.</span>propfind
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.proppatch" id="apidoc.element.requisition.proppatch">
+        function <span class="apidocSignatureSpan">requisition.</span>proppatch
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.purge" id="apidoc.element.requisition.purge">
+        function <span class="apidocSignatureSpan">requisition.</span>purge
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.put" id="apidoc.element.requisition.put">
+        function <span class="apidocSignatureSpan">requisition.</span>put
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.rebind" id="apidoc.element.requisition.rebind">
+        function <span class="apidocSignatureSpan">requisition.</span>rebind
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.report" id="apidoc.element.requisition.report">
+        function <span class="apidocSignatureSpan">requisition.</span>report
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.search" id="apidoc.element.requisition.search">
+        function <span class="apidocSignatureSpan">requisition.</span>search
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.subscribe" id="apidoc.element.requisition.subscribe">
+        function <span class="apidocSignatureSpan">requisition.</span>subscribe
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.trace" id="apidoc.element.requisition.trace">
+        function <span class="apidocSignatureSpan">requisition.</span>trace
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.unbind" id="apidoc.element.requisition.unbind">
+        function <span class="apidocSignatureSpan">requisition.</span>unbind
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.unlink" id="apidoc.element.requisition.unlink">
+        function <span class="apidocSignatureSpan">requisition.</span>unlink
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.unlock" id="apidoc.element.requisition.unlock">
+        function <span class="apidocSignatureSpan">requisition.</span>unlock
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.requisition.unsubscribe" id="apidoc.element.requisition.unsubscribe">
+        function <span class="apidocSignatureSpan">requisition.</span>unsubscribe
+        <span class="apidocSignatureSpan">(url, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function request(url, opts) {
+  return new Request(METHOD, url, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
